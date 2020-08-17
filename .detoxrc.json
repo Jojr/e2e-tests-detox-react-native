@@ -1,0 +1,19 @@
+{
+  "testRunner": "mocha",
+  "runnerConfig": "e2e/.mocharc.json",
+  "configurations": {
+    "ios": {
+      "type": "ios.simulator",
+      "name": "iPhone 11",
+      "binaryPath": "ios/Build/Products/Debug-iphonesimulator/E2ETest.app",
+      "build": "xcodebuild -project ios/E2ETest.app.xcworkspace -scheme E2ETest.app -configuration Debug -sdk iphonesimulator -derivedDataPath ios/Build"
+    },
+    "android": {
+      "type": "android.emulator",
+      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY",
+      "device": {
+        "avdName": "Pixel_2_API_29"
+      }
+    }
+  }
+}
